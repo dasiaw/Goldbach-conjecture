@@ -11,16 +11,16 @@ def isEven(i):
         print("helloworldd")
 
 
-def isPrime(i):
+def isPrime(num):
     from math import sqrt
-    if i == 0 or i == 1:
+    if num == 0 or num == 1:
         flag = False
         print("if start")
-    elif i == 2:
+    elif num == 2:
         flag = True
     else:
-        for i in range(2, i):
-            if i % i == 0:
+        for i in range(2, num):
+            if num % i == 0:
                 flag = False
                 break
             else:
@@ -52,9 +52,12 @@ def main():
             for i in range(1, num):
                 j = num - 1
                 print(j)
-                print(i)
+                print(num)
 
-            i_list.append(i)
+                if isPrime(i) and isPrime(j):
+                    i_list.append(i)
+                else:
+                    print("helloworldd")
 
         else:
             print("helloworldd")
