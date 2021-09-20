@@ -15,7 +15,6 @@ def isPrime(num):
     from math import sqrt
     if num == 0 or num == 1:
         flag = False
-        print("if start")
     elif num == 2:
         flag = True
     else:
@@ -25,7 +24,7 @@ def isPrime(num):
                 break
             else:
                 flag = True
-                return flag
+            return flag
 
 
 def isnum(string):
@@ -35,32 +34,36 @@ def isnum(string):
         return False
 
 
-def test():
-    print("test works")
-
-
-i_list = []
 def main():
 
-    test()
+    for i in range(5, 11):
 
-    for i in range(1, 11):
-
-        if i % 2 == 0:
+        if isEven(i):
             num = i
-            print(num)
+            i_list = []
             for i in range(1, num):
-                j = num - 1
+                j = num - i
                 print(j)
                 print(num)
 
                 if isPrime(i) and isPrime(j):
+                    print("answer")
+                    print(i, j)
                     i_list.append(i)
+                    # print(i_list)
+
+                    if j in i_list:
+                        # print(i_list)
+                        pass
+                    else:
+                        print("answer")
+                        print(i, j)
                 else:
-                    print("helloworldd")
+                    print(i, j)
+                    print("1else")
 
         else:
-            print("helloworldd")
+            print("not Even")
 
 
 if __name__ == "__main__":
