@@ -20,11 +20,13 @@ def isPrime(num):
     else:
         for i in range(2, num):
             if num % i == 0:
+                #print("in loop")
+                # print(i)
                 flag = False
                 break
             else:
                 flag = True
-            return flag
+    return flag
 
 
 def isnum(string):
@@ -36,31 +38,39 @@ def isnum(string):
 
 def main():
 
-    for i in range(5, 11):
+    for i in range(5, 50):
 
         if isEven(i):
             num = i
             i_list = []
-            for i in range(1, num):
+            for i in range(2, num):
                 j = num - i
-                print(j)
-                print(num)
+                # print(j)
+                # print("num")
+                # print(num)
 
                 if isPrime(i) and isPrime(j):
+                    print(j)
+                    i_list.append(i)
+                    print("num")
+                    print(num)
                     print("answer")
                     print(i, j)
-                    i_list.append(i)
                     # print(i_list)
+                    flag = True
+                    break
 
                     if j in i_list:
                         # print(i_list)
                         pass
                     else:
-                        print("answer")
-                        print(i, j)
+                        # print("1else")
+                        #print(i, j)
+                        pass
                 else:
-                    print(i, j)
-                    print("1else")
+                    #print(i, j)
+                    # print("2else")
+                    pass
 
         else:
             print("not Even")
