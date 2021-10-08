@@ -6,11 +6,8 @@ from turtle import *
 def isEven(i):
     if i % 2 == 0:
         return True
-        # print("helloworld")
-
     else:
         return False
-        # print("helloworldd")
 
 
 def isPrime(num):
@@ -22,8 +19,6 @@ def isPrime(num):
     else:
         for i in range(2, num):
             if num % i == 0:
-                #print("in loop")
-                # print(i)
                 flag = False
                 break
             else:
@@ -31,7 +26,7 @@ def isPrime(num):
     return flag
 
 
-def isnum(string):
+def isNum(string):
     if string.isdigit():
         return True
     else:
@@ -39,24 +34,20 @@ def isnum(string):
 
 
 def main():
-    i_list = []
-    for i in range(5, 50):
+    num = turtle.textinput("user input", "enter a even number")
+    print(num)
 
-        if isEven(i):
-            num = i
-            print(num)
+    if isNum(num):
+        num = int(num)
+        if (num > 5) and isEven(num):
+            i_list = []
 
             for i in range(1, num):
                 j = num - i
-                # print(j)
-                # print("num")
-                # print(num)
 
                 if isPrime(i) and isPrime(j):
-                    # print(j)
+
                     i_list.append(i)
-                    # print("num")
-                    # print(num)
                     print("answer")
                     print(i, j)
                     flag = True
@@ -65,24 +56,17 @@ def main():
                     if j in i_list:
                         pass
                     else:
-                        # print("1else")
-                        #print(i, j)
                         pass
                 else:
-                    #print("not prime")
                     pass
 
         else:
-            # print(i)
-            #print("not Even")
+            print("Enter even number greater then 5")
             pass
 
+    else:
+        print("Enter a number")
 
-# taking input
-number = turtle.textinput("user input", "enter a even number")
-
-# print number input
-print(number)
 
 if __name__ == "__main__":
     main()
